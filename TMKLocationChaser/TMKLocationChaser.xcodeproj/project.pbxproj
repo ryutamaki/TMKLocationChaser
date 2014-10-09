@@ -14,8 +14,9 @@
 		0384549C19E6CE4800B73F92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0384549B19E6CE4800B73F92 /* Images.xcassets */; };
 		0384549F19E6CE4800B73F92 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0384549D19E6CE4800B73F92 /* LaunchScreen.xib */; };
 		038454AB19E6CE4800B73F92 /* TMKLocationChaserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 038454AA19E6CE4800B73F92 /* TMKLocationChaserTests.m */; };
-		038454B519E6D75200B73F92 /* classes in Resources */ = {isa = PBXBuildFile; fileRef = 038454B419E6D75200B73F92 /* classes */; };
-		038454B819E6D7A400B73F92 /* TMKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 038454B719E6D7A400B73F92 /* TMKLocationManager.m */; };
+		038454BB19E6D9ED00B73F92 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038454BA19E6D9ED00B73F92 /* CoreLocation.framework */; };
+		038454C719E6E03700B73F92 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 038454C319E6E03700B73F92 /* MainViewController.m */; };
+		038454C819E6E03700B73F92 /* TMKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 038454C619E6E03700B73F92 /* TMKLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +42,11 @@
 		038454A419E6CE4800B73F92 /* TMKLocationChaserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMKLocationChaserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		038454A919E6CE4800B73F92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		038454AA19E6CE4800B73F92 /* TMKLocationChaserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMKLocationChaserTests.m; sourceTree = "<group>"; };
-		038454B419E6D75200B73F92 /* classes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = classes; sourceTree = "<group>"; };
-		038454B619E6D7A400B73F92 /* TMKLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMKLocationManager.h; path = TMKLocationChaser/classes/Manager/TMKLocationManager.h; sourceTree = "<group>"; };
-		038454B719E6D7A400B73F92 /* TMKLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMKLocationManager.m; path = TMKLocationChaser/classes/Manager/TMKLocationManager.m; sourceTree = "<group>"; };
+		038454BA19E6D9ED00B73F92 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		038454C219E6E03700B73F92 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		038454C319E6E03700B73F92 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		038454C519E6E03700B73F92 /* TMKLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMKLocationManager.h; sourceTree = "<group>"; };
+		038454C619E6E03700B73F92 /* TMKLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMKLocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038454BB19E6D9ED00B73F92 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,10 +71,9 @@
 		0384547F19E6CE4700B73F92 = {
 			isa = PBXGroup;
 			children = (
-				038454B619E6D7A400B73F92 /* TMKLocationManager.h */,
-				038454B719E6D7A400B73F92 /* TMKLocationManager.m */,
 				0384548A19E6CE4700B73F92 /* TMKLocationChaser */,
 				038454A719E6CE4800B73F92 /* TMKLocationChaserTests */,
+				038454B919E6D9CF00B73F92 /* Frameworks */,
 				0384548919E6CE4700B73F92 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,7 +92,7 @@
 			children = (
 				0384548F19E6CE4700B73F92 /* AppDelegate.h */,
 				0384549019E6CE4700B73F92 /* AppDelegate.m */,
-				038454B419E6D75200B73F92 /* classes */,
+				038454C119E6E03700B73F92 /* classes */,
 				0384549819E6CE4700B73F92 /* Main.storyboard */,
 				0384549B19E6CE4800B73F92 /* Images.xcassets */,
 				0384549D19E6CE4800B73F92 /* LaunchScreen.xib */,
@@ -123,6 +126,34 @@
 				038454A919E6CE4800B73F92 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		038454B919E6D9CF00B73F92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				038454BA19E6D9ED00B73F92 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			path = TMKLocationChaserTests;
+			sourceTree = "<group>";
+		};
+		038454C119E6E03700B73F92 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				038454C219E6E03700B73F92 /* MainViewController.h */,
+				038454C319E6E03700B73F92 /* MainViewController.m */,
+				038454C419E6E03700B73F92 /* Manager */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		038454C419E6E03700B73F92 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				038454C519E6E03700B73F92 /* TMKLocationManager.h */,
+				038454C619E6E03700B73F92 /* TMKLocationManager.m */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0384549A19E6CE4700B73F92 /* Main.storyboard in Resources */,
-				038454B519E6D75200B73F92 /* classes in Resources */,
 				0384549F19E6CE4800B73F92 /* LaunchScreen.xib in Resources */,
 				0384549C19E6CE4800B73F92 /* Images.xcassets in Resources */,
 			);
@@ -228,8 +258,9 @@
 			files = (
 				0384549119E6CE4700B73F92 /* AppDelegate.m in Sources */,
 				0384548E19E6CE4700B73F92 /* main.m in Sources */,
+				038454C819E6E03700B73F92 /* TMKLocationManager.m in Sources */,
 				0384549419E6CE4700B73F92 /* TMKLocationChaser.xcdatamodeld in Sources */,
-				038454B819E6D7A400B73F92 /* TMKLocationManager.m in Sources */,
+				038454C719E6E03700B73F92 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

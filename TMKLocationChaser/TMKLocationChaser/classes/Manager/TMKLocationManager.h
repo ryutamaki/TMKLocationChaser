@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface TMKLocationManager : NSObject
+@interface TMKLocationManager : NSObject <CLLocationManagerDelegate>
+
+@property (nonatomic, retain) CLLocationManager *locationManager;
+
+
++ (TMKLocationManager *)sharedLocationManager;
 
 @end

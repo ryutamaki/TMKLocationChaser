@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "TMKLocationManager.h"
 
 @interface MainViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [TMKLocationManager sharedLocationManager];
 }
 
 - (void)didReceiveMemoryWarning {
