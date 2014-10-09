@@ -10,11 +10,11 @@
 		0384548E19E6CE4700B73F92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0384548D19E6CE4700B73F92 /* main.m */; };
 		0384549119E6CE4700B73F92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0384549019E6CE4700B73F92 /* AppDelegate.m */; };
 		0384549419E6CE4700B73F92 /* TMKLocationChaser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0384549219E6CE4700B73F92 /* TMKLocationChaser.xcdatamodeld */; };
-		0384549719E6CE4700B73F92 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0384549619E6CE4700B73F92 /* MainViewController.m */; };
 		0384549A19E6CE4700B73F92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0384549819E6CE4700B73F92 /* Main.storyboard */; };
 		0384549C19E6CE4800B73F92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0384549B19E6CE4800B73F92 /* Images.xcassets */; };
 		0384549F19E6CE4800B73F92 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0384549D19E6CE4800B73F92 /* LaunchScreen.xib */; };
 		038454AB19E6CE4800B73F92 /* TMKLocationChaserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 038454AA19E6CE4800B73F92 /* TMKLocationChaserTests.m */; };
+		038454B519E6D75200B73F92 /* classes in Resources */ = {isa = PBXBuildFile; fileRef = 038454B419E6D75200B73F92 /* classes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +34,6 @@
 		0384548F19E6CE4700B73F92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0384549019E6CE4700B73F92 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0384549319E6CE4700B73F92 /* TMKLocationChaser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TMKLocationChaser.xcdatamodel; sourceTree = "<group>"; };
-		0384549519E6CE4700B73F92 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		0384549619E6CE4700B73F92 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		0384549919E6CE4700B73F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0384549B19E6CE4800B73F92 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0384549E19E6CE4800B73F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -85,8 +83,7 @@
 			children = (
 				0384548F19E6CE4700B73F92 /* AppDelegate.h */,
 				0384549019E6CE4700B73F92 /* AppDelegate.m */,
-				0384549519E6CE4700B73F92 /* MainViewController.h */,
-				0384549619E6CE4700B73F92 /* MainViewController.m */,
+				038454B419E6D75200B73F92 /* classes */,
 				0384549819E6CE4700B73F92 /* Main.storyboard */,
 				0384549B19E6CE4800B73F92 /* Images.xcassets */,
 				0384549D19E6CE4800B73F92 /* LaunchScreen.xib */,
@@ -203,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0384549A19E6CE4700B73F92 /* Main.storyboard in Resources */,
+				038454B519E6D75200B73F92 /* classes in Resources */,
 				0384549F19E6CE4800B73F92 /* LaunchScreen.xib in Resources */,
 				0384549C19E6CE4800B73F92 /* Images.xcassets in Resources */,
 			);
@@ -224,7 +222,6 @@
 			files = (
 				0384549119E6CE4700B73F92 /* AppDelegate.m in Sources */,
 				0384548E19E6CE4700B73F92 /* main.m in Sources */,
-				0384549719E6CE4700B73F92 /* MainViewController.m in Sources */,
 				0384549419E6CE4700B73F92 /* TMKLocationChaser.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +415,7 @@
 				038454B019E6CE4800B73F92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		038454B119E6CE4800B73F92 /* Build configuration list for PBXNativeTarget "TMKLocationChaserTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +424,7 @@
 				038454B319E6CE4800B73F92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
