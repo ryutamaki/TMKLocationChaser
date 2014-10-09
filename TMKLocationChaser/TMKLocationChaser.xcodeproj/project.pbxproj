@@ -15,6 +15,7 @@
 		0384549F19E6CE4800B73F92 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0384549D19E6CE4800B73F92 /* LaunchScreen.xib */; };
 		038454AB19E6CE4800B73F92 /* TMKLocationChaserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 038454AA19E6CE4800B73F92 /* TMKLocationChaserTests.m */; };
 		038454B519E6D75200B73F92 /* classes in Resources */ = {isa = PBXBuildFile; fileRef = 038454B419E6D75200B73F92 /* classes */; };
+		038454B819E6D7A400B73F92 /* TMKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 038454B719E6D7A400B73F92 /* TMKLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		038454A419E6CE4800B73F92 /* TMKLocationChaserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMKLocationChaserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		038454A919E6CE4800B73F92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		038454AA19E6CE4800B73F92 /* TMKLocationChaserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMKLocationChaserTests.m; sourceTree = "<group>"; };
+		038454B419E6D75200B73F92 /* classes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = classes; sourceTree = "<group>"; };
+		038454B619E6D7A400B73F92 /* TMKLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMKLocationManager.h; path = TMKLocationChaser/classes/Manager/TMKLocationManager.h; sourceTree = "<group>"; };
+		038454B719E6D7A400B73F92 /* TMKLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMKLocationManager.m; path = TMKLocationChaser/classes/Manager/TMKLocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 		0384547F19E6CE4700B73F92 = {
 			isa = PBXGroup;
 			children = (
+				038454B619E6D7A400B73F92 /* TMKLocationManager.h */,
+				038454B719E6D7A400B73F92 /* TMKLocationManager.m */,
 				0384548A19E6CE4700B73F92 /* TMKLocationChaser */,
 				038454A719E6CE4800B73F92 /* TMKLocationChaserTests */,
 				0384548919E6CE4700B73F92 /* Products */,
@@ -223,6 +229,7 @@
 				0384549119E6CE4700B73F92 /* AppDelegate.m in Sources */,
 				0384548E19E6CE4700B73F92 /* main.m in Sources */,
 				0384549419E6CE4700B73F92 /* TMKLocationChaser.xcdatamodeld in Sources */,
+				038454B819E6D7A400B73F92 /* TMKLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
