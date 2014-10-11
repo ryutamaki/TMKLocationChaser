@@ -29,11 +29,23 @@ static TMKLocationManager* sharedLocationManager = nil;
             _locationManager = [[CLLocationManager alloc] init];
         }
         _locationManager.delegate = self;
-        [_locationManager startUpdatingLocation];
     }
     return self;
 }
 
+- (void)startChasingLocation
+{
+    [_locationManager startUpdatingLocation];
+}
+
+- (void)stopChasingLocation
+{
+    [_locationManager stopUpdatingLocation];
+}
+
+
+#pragma mark -
+#pragma mark CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
     NSLog(@"called   %d", status);

@@ -16,4 +16,7 @@
 
 + (TMKLocationManager *)sharedLocationManager;
 
+- (void)startChasingLocation;
+- (void)stopChasingLocation;
+
 @end
