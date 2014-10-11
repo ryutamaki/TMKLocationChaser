@@ -7,17 +7,18 @@
 //
 
 #import <CoreData/CoreData.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface Location : NSManagedObject
 
-@property (nonatomic) double latitude;
-@property (nonatomic) double longitude;
-@property (nonatomic) double speed;
-@property (nonatomic) double course;
-@property (nonatomic) double altitude;
-@property (nonatomic) double floor;
-@property (nonatomic) double horizontalAccuracy;
-@property (nonatomic) double verticalAccuracy;
+@property (nonatomic) CLLocationDegrees latitude;
+@property (nonatomic) CLLocationDegrees longitude;
+@property (nonatomic) CLLocationSpeed speed;
+@property (nonatomic) CLLocationDirection course;
+@property (nonatomic) CLLocationDistance altitude;
+@property (nonatomic) NSInteger floor;
+@property (nonatomic) CLLocationAccuracy horizontalAccuracy;
+@property (nonatomic) CLLocationAccuracy verticalAccuracy;
 @property (nonatomic, retain) NSDate *date;
 
 @end
