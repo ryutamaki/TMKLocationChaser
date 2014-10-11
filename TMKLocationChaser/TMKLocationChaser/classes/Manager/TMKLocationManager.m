@@ -55,8 +55,17 @@ static TMKLocationManager* sharedLocationManager = nil;
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation*)newLocation fromLocation:(CLLocation*)oldLocation {
-    NSLog(@"%@", newLocation);
-    NSLog(@"%@", oldLocation);
+    NSLog(@"latitude:   %f", newLocation.coordinate.latitude);
+    NSLog(@"longitude:  %f", newLocation.coordinate.longitude);
+    NSLog(@"speed:      %f", newLocation.speed);
+    NSLog(@"cource:     %f", newLocation.course);
+    NSLog(@"altitude:   %f", newLocation.altitude);
+    NSLog(@"floor:      %@", newLocation.floor);
+    NSLog(@"h_accuracy: %f", newLocation.horizontalAccuracy);
+    NSLog(@"v_accuracy: %f", newLocation.verticalAccuracy);
+    NSLog(@"timestamp:  %@", newLocation.timestamp);
+
+    [self stopChasingLocation];
 }
 
 @end
