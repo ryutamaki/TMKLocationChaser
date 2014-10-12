@@ -8,16 +8,17 @@
 
 #import "Location.h"
 
+
 @implementation Location
 
+@dynamic altitude;
+@dynamic course;
+@dynamic date;
+@dynamic floor;
+@dynamic horizontalAccuracy;
 @dynamic latitude;
 @dynamic longitude;
 @dynamic speed;
-@dynamic course;
-@dynamic altitude;
-@dynamic floor;
-@dynamic horizontalAccuracy;
 @dynamic verticalAccuracy;
-@dynamic date;
 
 @end

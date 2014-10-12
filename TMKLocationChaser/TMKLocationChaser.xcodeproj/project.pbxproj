@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0361916C19EA2A3300A3EA9D /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 0361916B19EA2A3300A3EA9D /* Location.m */; };
 		0384548E19E6CE4700B73F92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0384548D19E6CE4700B73F92 /* main.m */; };
 		0384549119E6CE4700B73F92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0384549019E6CE4700B73F92 /* AppDelegate.m */; };
 		0384549419E6CE4700B73F92 /* TMKLocationChaser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0384549219E6CE4700B73F92 /* TMKLocationChaser.xcdatamodeld */; };
@@ -19,7 +20,6 @@
 		038454C819E6E03700B73F92 /* TMKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 038454C619E6E03700B73F92 /* TMKLocationManager.m */; };
 		0390367A19E90D20009D9E2A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0390367919E90D20009D9E2A /* CoreData.framework */; };
 		0390367D19E9111E009D9E2A /* TMKCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0390367C19E9111E009D9E2A /* TMKCoreDataManager.m */; };
-		0390368119E97DBE009D9E2A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 0390368019E97DBE009D9E2A /* Location.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0361916A19EA2A3300A3EA9D /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		0361916B19EA2A3300A3EA9D /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		0384548819E6CE4700B73F92 /* TMKLocationChaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMKLocationChaser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0384548C19E6CE4700B73F92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0384548D19E6CE4700B73F92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,8 +55,6 @@
 		0390367919E90D20009D9E2A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0390367B19E9111E009D9E2A /* TMKCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMKCoreDataManager.h; sourceTree = "<group>"; };
 		0390367C19E9111E009D9E2A /* TMKCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMKCoreDataManager.m; sourceTree = "<group>"; };
-		0390367F19E97DBE009D9E2A /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
-		0390368019E97DBE009D9E2A /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +172,8 @@
 		0390367E19E97DAD009D9E2A /* ManagedObject */ = {
 			isa = PBXGroup;
 			children = (
-				0390367F19E97DBE009D9E2A /* Location.h */,
-				0390368019E97DBE009D9E2A /* Location.m */,
+				0361916A19EA2A3300A3EA9D /* Location.h */,
+				0361916B19EA2A3300A3EA9D /* Location.m */,
 			);
 			path = ManagedObject;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0384549119E6CE4700B73F92 /* AppDelegate.m in Sources */,
-				0390368119E97DBE009D9E2A /* Location.m in Sources */,
+				0361916C19EA2A3300A3EA9D /* Location.m in Sources */,
 				0390367D19E9111E009D9E2A /* TMKCoreDataManager.m in Sources */,
 				0384548E19E6CE4700B73F92 /* main.m in Sources */,
 				038454C819E6E03700B73F92 /* TMKLocationManager.m in Sources */,
