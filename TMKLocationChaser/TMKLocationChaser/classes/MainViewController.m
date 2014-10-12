@@ -27,7 +27,32 @@
 
 - (IBAction)startChasingLocation:(id)sender {
     TMKLocationManager *locationManager = [TMKLocationManager sharedLocationManager];
+    if (locationManager.isChasing) {
+        UIAlertView *alertView =[[UIAlertView alloc] initWithTitle:@"!!"
+                                                           message:@"It has already started chasing"
+                                                          delegate:nil
+                                                 cancelButtonTitle:@"ok"
+                                                 otherButtonTitles:nil, nil];
+        [alertView show];
+        return;
+    }
+    // start chasing location if it has not started chasing
     [locationManager startChasingLocation];
+}
+
+- (IBAction)stopChasingLocation:(id)sender {
+    TMKLocationManager *locationManager = [TMKLocationManager sharedLocationManager];
+    if (!locationManager.isChasing) {
+        UIAlertView *alertView =[[UIAlertView alloc] initWithTitle:@"!!"
+                                                           message:@"It has not started chasing"
+                                                          delegate:nil
+                                                 cancelButtonTitle:@"ok"
+                                                 otherButtonTitles:nil, nil];
+        [alertView show];
+        return;
+    }
+    // stop chasing location if it has already started chasing
+    [locationManager stopChasingLocation];
 }
 
 @end

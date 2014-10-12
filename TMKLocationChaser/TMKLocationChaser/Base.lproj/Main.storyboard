@@ -17,23 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F70-hy-uqw">
-                                <rect key="frame" x="150" y="364" width="300" height="50"/>
-                                <color key="backgroundColor" red="0.33492943644523621" green="0.63004708290100098" blue="0.99870157241821289" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="HWQ-PF-Beh"/>
-                                    <constraint firstAttribute="width" constant="300" id="yXA-mx-hgi"/>
-                                </constraints>
-                                <state key="normal" title="Start Tracking">
-                                    <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startChasingLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61b-8J-qPb"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkX-3P-xbN">
-                                <rect key="frame" x="150" y="464" width="300" height="50"/>
+                                <rect key="frame" x="150" y="500" width="300" height="50"/>
                                 <color key="backgroundColor" red="0.3349294364" green="0.6300470829" blue="0.99870157240000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="2au-47-WTW"/>
@@ -47,21 +32,57 @@
                                     <segue destination="uLD-dx-rJG" kind="show" id="BU2-l1-y5z"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F70-hy-uqw">
+                                <rect key="frame" x="150" y="300" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.33492943644523621" green="0.63004708290100098" blue="0.99870157241821289" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HWQ-PF-Beh"/>
+                                    <constraint firstAttribute="width" constant="300" id="yXA-mx-hgi"/>
+                                </constraints>
+                                <state key="normal" title="Start Tracking">
+                                    <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startChasingLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61b-8J-qPb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8K-VZ-awj">
+                                <rect key="frame" x="150" y="400" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.9886130690574646" green="0.36919596791267395" blue="0.21992748975753784" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Dd9-u4-7Es"/>
+                                    <constraint firstAttribute="height" constant="50" id="sbP-qh-uIA"/>
+                                </constraints>
+                                <state key="normal" title="Stop Tracking">
+                                    <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopChasingLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M1W-73-7T7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="e8K-VZ-awj" secondAttribute="centerX" id="0fL-XP-cjW"/>
                             <constraint firstAttribute="centerX" secondItem="F70-hy-uqw" secondAttribute="centerX" id="5aX-fz-KRH"/>
-                            <constraint firstItem="F70-hy-uqw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="300" id="61E-N3-fDa"/>
+                            <constraint firstItem="F70-hy-uqw" firstAttribute="width" secondItem="e8K-VZ-awj" secondAttribute="width" id="5dP-L8-6JQ"/>
+                            <constraint firstItem="e8K-VZ-awj" firstAttribute="top" secondItem="F70-hy-uqw" secondAttribute="bottom" constant="50" id="6nn-bu-gKg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MkX-3P-xbN" secondAttribute="trailing" constant="100" id="AU0-pX-XFb"/>
                             <constraint firstAttribute="centerX" secondItem="MkX-3P-xbN" secondAttribute="centerX" id="CHf-jk-W5i"/>
                             <constraint firstAttribute="centerX" secondItem="MkX-3P-xbN" secondAttribute="centerX" id="HJn-Bm-xCP"/>
+                            <constraint firstItem="MkX-3P-xbN" firstAttribute="top" secondItem="e8K-VZ-awj" secondAttribute="bottom" constant="50" id="OcC-Mf-Cfl"/>
                             <constraint firstItem="F70-hy-uqw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="T4t-5T-86f"/>
                             <constraint firstAttribute="centerX" secondItem="F70-hy-uqw" secondAttribute="centerX" id="T6g-Kb-a0o"/>
                             <constraint firstItem="F70-hy-uqw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="350" id="fRn-fQ-kLf"/>
+                            <constraint firstItem="F70-hy-uqw" firstAttribute="height" secondItem="MkX-3P-xbN" secondAttribute="height" id="h01-yE-MfY"/>
                             <constraint firstItem="MkX-3P-xbN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="icu-XD-8Ya"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MkX-3P-xbN" secondAttribute="bottom" constant="50" id="k49-o3-A6i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F70-hy-uqw" secondAttribute="trailing" constant="100" id="n9G-Ee-gaZ"/>
+                            <constraint firstItem="F70-hy-uqw" firstAttribute="height" secondItem="e8K-VZ-awj" secondAttribute="height" id="o5G-Bv-MT8"/>
                             <constraint firstItem="MkX-3P-xbN" firstAttribute="width" secondItem="F70-hy-uqw" secondAttribute="width" id="rIQ-bs-KYL"/>
-                            <constraint firstItem="MkX-3P-xbN" firstAttribute="top" secondItem="F70-hy-uqw" secondAttribute="bottom" constant="50" id="tHZ-91-Ebo"/>
+                            <constraint firstItem="F70-hy-uqw" firstAttribute="width" secondItem="MkX-3P-xbN" secondAttribute="width" id="xQE-K5-9P2"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

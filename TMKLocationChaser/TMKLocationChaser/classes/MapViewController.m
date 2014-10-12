@@ -20,13 +20,7 @@
 
     TMKCoreDataManager *coreDataManager = [TMKCoreDataManager sharedCoreDataManager];
     NSMutableArray *locations = [coreDataManager fetch:@"Location" sortKey:@"date" limit:0];
-    CLLocationCoordinate2D points[[locations count]];
-    for (NSInteger i = 0; i < [locations count]; i++) {
-        Location *location = locations[i];
-        points[i] = CLLocationCoordinate2DMake(location.latitude.floatValue, location.longitude.floatValue);
-    }
-    MKPolyline *path = [MKPolyline polylineWithCoordinates:points count:2];
-    [self.mapView addOverlay:path];
+    [self renderPolyLineWithLocations:locations];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,6 +37,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Private Methods
+
+- (void)renderPolyLineWithLocations:(NSMutableArray *)locations {
+    CLLocationCoordinate2D points[[locations count]];
+    for (NSInteger i = 0; i < [locations count]; i++) {
+        Location *location = locations[i];
+        points[i] = CLLocationCoordinate2DMake(location.latitude.floatValue, location.longitude.floatValue);
+    }
+    MKPolyline *path = [MKPolyline polylineWithCoordinates:points count:2];
+    [self.mapView addOverlay:path];
+}
+
 
 #pragma mark - MKMapViewDelegate
 

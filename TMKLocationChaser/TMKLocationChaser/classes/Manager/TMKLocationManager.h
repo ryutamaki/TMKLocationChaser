@@ -14,6 +14,7 @@
 @interface TMKLocationManager : NSObject <CLLocationManagerDelegate>
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic) BOOL isChasing;
 
 
 + (TMKLocationManager *)sharedLocationManager;

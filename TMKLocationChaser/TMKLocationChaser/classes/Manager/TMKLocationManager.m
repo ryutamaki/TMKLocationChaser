@@ -29,6 +29,7 @@ static TMKLocationManager* sharedLocationManager = nil;
             _locationManager = [[CLLocationManager alloc] init];
         }
         _locationManager.delegate = self;
+        self.isChasing = false;
     }
     return self;
 }
@@ -36,11 +37,13 @@ static TMKLocationManager* sharedLocationManager = nil;
 - (void)startChasingLocation
 {
     [_locationManager startUpdatingLocation];
+    self.isChasing = true;
 }
 
 - (void)stopChasingLocation
 {
     [_locationManager stopUpdatingLocation];
+    self.isChasing = false;
 }
 
 
