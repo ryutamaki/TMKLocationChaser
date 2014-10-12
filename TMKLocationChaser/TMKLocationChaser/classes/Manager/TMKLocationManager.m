@@ -48,24 +48,29 @@ static TMKLocationManager* sharedLocationManager = nil;
 #pragma mark CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-    NSLog(@"called   %d", status);
     if (status == kCLAuthorizationStatusNotDetermined) {
         [manager requestWhenInUseAuthorization];
     }
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation*)newLocation fromLocation:(CLLocation*)oldLocation {
-    NSLog(@"latitude:   %f", newLocation.coordinate.latitude);
-    NSLog(@"longitude:  %f", newLocation.coordinate.longitude);
-    NSLog(@"speed:      %f", newLocation.speed);
-    NSLog(@"cource:     %f", newLocation.course);
-    NSLog(@"altitude:   %f", newLocation.altitude);
-    NSLog(@"floor:      %@", newLocation.floor);
-    NSLog(@"h_accuracy: %f", newLocation.horizontalAccuracy);
-    NSLog(@"v_accuracy: %f", newLocation.verticalAccuracy);
-    NSLog(@"timestamp:  %@", newLocation.timestamp);
+    TMKCoreDataManager *coreDataManager = [TMKCoreDataManager sharedCoreDataManager];
+    /*
+    NSMutableArray *fetchResult = [coreDataManager fetch:@"Location" sortKey:@"date" limit:0];
+    NSLog(@"%@", fetchResult);
+     */
+    Location *location = (Location *)[coreDataManager entityForInsert:@"Location"];
+    location.latitude = [NSNumber numberWithDouble:newLocation.coordinate.latitude];
+    location.longitude = [NSNumber numberWithDouble:newLocation.coordinate.longitude];
+    location.speed = [NSNumber numberWithDouble:newLocation.speed];
+    location.course = [NSNumber numberWithDouble:newLocation.course];
+    location.floor = [NSNumber numberWithInteger:newLocation.floor.level];
+    location.horizontalAccuracy = [NSNumber numberWithDouble:newLocation.horizontalAccuracy];
+    location.verticalAccuracy = [NSNumber numberWithDouble:newLocation.verticalAccuracy];
+    location.date = newLocation.timestamp;
+    NSLog(@"%@", location);
 
-    [self stopChasingLocation];
+    [coreDataManager saveContext];
 }
 
 @end

@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+#import "TMKCoreDataManager.h"
+#import "Location.h"
+
 @interface TMKLocationManager : NSObject <CLLocationManagerDelegate>
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
