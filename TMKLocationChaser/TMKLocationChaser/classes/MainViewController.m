@@ -18,14 +18,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    TMKLocationManager *locationManager = [TMKLocationManager sharedLocationManager];
-    [locationManager startChasingLocation];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)startChasingLocation:(id)sender {
+    TMKLocationManager *locationManager = [TMKLocationManager sharedLocationManager];
+    [locationManager startChasingLocation];
+}
+
+- (IBAction)showData:(id)sender {
+    TMKCoreDataManager *coreDataManager = [TMKCoreDataManager sharedCoreDataManager];
+     NSMutableArray *fetchResult = [coreDataManager fetch:@"Location" sortKey:@"date" limit:10];
+     NSLog(@"%@", fetchResult);
 }
 
 @end
