@@ -30,10 +30,4 @@
     [locationManager startChasingLocation];
 }
 
-- (IBAction)showData:(id)sender {
-    TMKCoreDataManager *coreDataManager = [TMKCoreDataManager sharedCoreDataManager];
-     NSMutableArray *fetchResult = [coreDataManager fetch:@"Location" sortKey:@"date" limit:10];
-     NSLog(@"%@", fetchResult);
-}
-
 @end

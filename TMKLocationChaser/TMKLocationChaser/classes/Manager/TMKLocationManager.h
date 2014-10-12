@@ -10,7 +10,6 @@
 #import <CoreLocation/CoreLocation.h>
 
 #import "TMKCoreDataManager.h"
-#import "Location.h"
 
 @interface TMKLocationManager : NSObject <CLLocationManagerDelegate>
 

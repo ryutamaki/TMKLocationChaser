@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+#import "Location.h"
+
 @interface TMKCoreDataManager : NSObject
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

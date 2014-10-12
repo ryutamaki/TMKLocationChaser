@@ -20,6 +20,8 @@
 		038454C819E6E03700B73F92 /* TMKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 038454C619E6E03700B73F92 /* TMKLocationManager.m */; };
 		0390367A19E90D20009D9E2A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0390367919E90D20009D9E2A /* CoreData.framework */; };
 		0390367D19E9111E009D9E2A /* TMKCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0390367C19E9111E009D9E2A /* TMKCoreDataManager.m */; };
+		03B7FABD19EA39A400808CB8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B7FABC19EA39A400808CB8 /* MapKit.framework */; };
+		03B7FAC019EA39D600808CB8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B7FABF19EA39D600808CB8 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		0390367919E90D20009D9E2A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0390367B19E9111E009D9E2A /* TMKCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMKCoreDataManager.h; sourceTree = "<group>"; };
 		0390367C19E9111E009D9E2A /* TMKCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMKCoreDataManager.m; sourceTree = "<group>"; };
+		03B7FABC19EA39A400808CB8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		03B7FABE19EA39D600808CB8 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		03B7FABF19EA39D600808CB8 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B7FABD19EA39A400808CB8 /* MapKit.framework in Frameworks */,
 				0390367A19E90D20009D9E2A /* CoreData.framework in Frameworks */,
 				038454BB19E6D9ED00B73F92 /* CoreLocation.framework in Frameworks */,
 			);
@@ -140,6 +146,7 @@
 		038454B919E6D9CF00B73F92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03B7FABC19EA39A400808CB8 /* MapKit.framework */,
 				0390367919E90D20009D9E2A /* CoreData.framework */,
 				038454BA19E6D9ED00B73F92 /* CoreLocation.framework */,
 			);
@@ -152,6 +159,8 @@
 			children = (
 				038454C219E6E03700B73F92 /* MainViewController.h */,
 				038454C319E6E03700B73F92 /* MainViewController.m */,
+				03B7FABE19EA39D600808CB8 /* MapViewController.h */,
+				03B7FABF19EA39D600808CB8 /* MapViewController.m */,
 				038454C419E6E03700B73F92 /* Manager */,
 				0390367E19E97DAD009D9E2A /* ManagedObject */,
 			);
@@ -281,6 +290,7 @@
 				0384549119E6CE4700B73F92 /* AppDelegate.m in Sources */,
 				0361916C19EA2A3300A3EA9D /* Location.m in Sources */,
 				0390367D19E9111E009D9E2A /* TMKCoreDataManager.m in Sources */,
+				03B7FAC019EA39D600808CB8 /* MapViewController.m in Sources */,
 				0384548E19E6CE4700B73F92 /* main.m in Sources */,
 				038454C819E6E03700B73F92 /* TMKLocationManager.m in Sources */,
 				0384549419E6CE4700B73F92 /* TMKLocationChaser.xcdatamodeld in Sources */,
