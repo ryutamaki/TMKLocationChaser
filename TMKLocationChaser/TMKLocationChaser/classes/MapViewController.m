@@ -41,12 +41,13 @@
 #pragma mark - Private Methods
 
 - (void)renderPolyLineWithLocations:(NSMutableArray *)locations {
-    CLLocationCoordinate2D points[[locations count]];
-    for (NSInteger i = 0; i < [locations count]; i++) {
+    NSInteger locationCount = [locations count];
+    CLLocationCoordinate2D points[locationCount];
+    for (NSInteger i = 0; i < locationCount; i++) {
         Location *location = locations[i];
         points[i] = CLLocationCoordinate2DMake(location.latitude.floatValue, location.longitude.floatValue);
     }
-    MKPolyline *path = [MKPolyline polylineWithCoordinates:points count:2];
+    MKPolyline *path = [MKPolyline polylineWithCoordinates:points count:locationCount];
     [self.mapView addOverlay:path];
 }
 
