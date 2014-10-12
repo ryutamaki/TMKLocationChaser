@@ -17,6 +17,9 @@
 
 + (TMKCoreDataManager *)sharedCoreDataManager;
 
+- (NSMutableArray *)fetch:(NSString *)entityName sortKey:(NSString *)key limit:(int)limit;
+- (NSManagedObject *)entityForInsert:(NSString *)entityName;
+
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 

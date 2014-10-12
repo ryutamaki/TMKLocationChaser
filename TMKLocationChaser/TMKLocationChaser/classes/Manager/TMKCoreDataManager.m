@@ -36,6 +36,38 @@ static TMKCoreDataManager* sharedCoreDataManager = nil;
     return self;
 }
 
+#pragma mark - Entity Access Methods
+
+- (NSMutableArray *)fetch:(NSString *)entityName sortKey:(NSString *)key limit:(int)limit
+{
+    NSManagedObjectContext* context = self.managedObjectContext;
+    NSFetchRequest* request = [[NSFetchRequest alloc] init];
+    [request setReturnsObjectsAsFaults:NO];
+    NSEntityDescription* entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
+    [request setEntity:entity];
+    if(key != nil)
+    {
+        NSSortDescriptor* sort = [[NSSortDescriptor alloc] initWithKey:key ascending:NO];
+        [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+    }
+
+    [request setFetchLimit:limit];
+
+    NSError* error = nil;
+    NSMutableArray* mutableFetchResults = [[context executeFetchRequest:request error:&error] mutableCopy];
+    if(error)
+    {
+        NSLog(@"%@ %ld %@",[error domain],(long)[error code],[[error userInfo] description]);
+    }
+    return mutableFetchResults;
+}
+
+- (NSManagedObject *)entityForInsert:(NSString *)entityName
+{
+    NSManagedObjectContext* context = self.managedObjectContext;
+    return [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:context];
+}
+
 #pragma mark - Core Data stack
 
 - (NSURL *)applicationDocumentsDirectory {
